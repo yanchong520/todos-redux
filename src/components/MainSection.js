@@ -5,10 +5,6 @@ import Footer from './Footer'
 
  class MainSection extends Component {
 
-  constructor(props) {
-     super(props);
-  }
-
   static propTypes = {
     todos: PropTypes.array.isRequired,
     actions: PropTypes.object.isRequired
@@ -55,7 +51,7 @@ import Footer from './Footer'
 
   render() {
     const todos = this.props.todos;
-    const filter = this.state;
+  
     const actions = this.props.actions;
     const filteredTodos = todos
     const completedCount = todos.reduce((count, todo) =>

@@ -1,7 +1,6 @@
 import Counter from '../Counter';
-import Immutable from 'immutable';
-import Todo from '../Todo';
-const initialState = []
+
+const initialState = [];
 
  const todos = (state = initialState, action)=> {
   switch (action.type) {

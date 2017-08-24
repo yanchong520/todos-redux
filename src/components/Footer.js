@@ -1,17 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-
-class Footer extends Component {
-
-  constructor(props) {
-     super(props);
-     this.FILTER_TITLES = {
+const FILTER_TITLES = {
       ['SHOW_ALL']: 'All',
       ['SHOW_ACTIVE']: 'Active',
       ['SHOW_COMPLETED']: 'Completed'
     }
-  }
+
+class Footer extends Component {
 
   static propTypes = {
     completedCount: PropTypes.number.isRequired,
@@ -33,7 +29,7 @@ class Footer extends Component {
   }
 
   renderFilterLink(filter) {
-    const title = this.FILTER_TITLES[filter];
+    const title = FILTER_TITLES[filter];
     const { filter: selectedFilter, onShow } = this.props
 
     return (
